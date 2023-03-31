@@ -1,0 +1,13 @@
+.mainContainer {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer h1 {
+  color: white;
+  font-size: 5.5vw;
+  font-family: "Roobert", sans-serif;
+  width: 60%;
+}

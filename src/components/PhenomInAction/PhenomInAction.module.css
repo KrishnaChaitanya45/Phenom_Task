@@ -1,0 +1,39 @@
+.mainContainer {
+  background-color: white;
+  padding: 10vh 10vw;
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  font-family: "Roobert", sans-serif;
+}
+.container h1 {
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+.container p {
+  width: 50%;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: #000;
+  margin-top: 5vh;
+}
+.navbarButtonOne {
+  padding: 2vh 1.5vw;
+  z-index: 10;
+  flex-shrink: 0;
+  border-radius: 30px;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-top: 4vh;
+  transition: all 0.12s;
+}
+.navbarButtonOne {
+  background-color: #4543d9;
+  border: 0 !important;
+  color: white;
+}
+.navbarButtonOne:hover {
+  opacity: 0.75;
+}

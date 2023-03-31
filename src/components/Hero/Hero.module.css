@@ -1,0 +1,148 @@
+.mainContainer {
+  background-color: black;
+  height: 90vh;
+  font-family: "Roobert", sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+  padding: 0 5%;
+  height: 100%;
+}
+.navbarButtonOne {
+  padding: 2vh 1.5vw;
+  z-index: 10;
+  flex-shrink: 0;
+  border-radius: 30px;
+  font-size: 1vw;
+  font-weight: 600;
+  transition: all 0.12s;
+}
+.navbarButtonOne {
+  background-color: #4543d9;
+  border: 0 !important;
+  color: white;
+}
+.secondContainer {
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../../public//asessts/hero_section_right.webp");
+}
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -5%;
+  justify-content: center;
+}
+.heading,
+.headingColored {
+  text-align: center;
+  font-size: 4vw;
+  margin: 0 !important;
+  color: white;
+  font-weight: 600;
+}
+.second {
+  display: flex;
+  transform: translateX(17.5%);
+  flex-direction: column;
+  gap: 4vh;
+  align-items: flex-start;
+  justify-content: center;
+}
+.second p {
+  color: white;
+  font-size: 1.5vw;
+  max-width: 70%;
+}
+.DropDownImage {
+  background-color: #eeeeee;
+  border-radius: 100%;
+  padding: 5px 10px;
+}
+
+.dropDownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+  gap: 2vw;
+}
+.dropDownContainer p {
+  color: white;
+  font-size: 1.1vw;
+
+  font-weight: 600;
+}
+.InnerImage {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+.InnerImageHidden {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+.hiddenDropDown {
+  padding: 1vh 1vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  z-index: 10;
+
+  width: 20vw;
+  justify-content: center;
+}
+.hiddenDropDownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.hiddenDropDownHeader p {
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+.upArrow {
+  transform: rotate(180deg);
+}
+.indDivDropDown {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1vh 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  cursor: pointer;
+  gap: 1vw;
+}
+.indDivDropDown:hover > p {
+  color: #4543d9;
+}
+.indDivDropDown:hover > img {
+  background-color: #4543d9;
+  scale: 1.1;
+}
+.parentDropDownContainer {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}

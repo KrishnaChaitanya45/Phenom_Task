@@ -1,0 +1,582 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+  color: black;
+  font-family: "Roobert", sans-serif;
+  background-color: black;
+}
+.navAndMegaMenuWrapper {
+  transition: all 0.3s;
+  position: sticky;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+}
+.navbarContainer {
+  padding: 0vh 2vw;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.indLinkOne,
+.indLinkTwo,
+.indLinkThree,
+.indLinkFour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 4vh 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.indLinkOne span,
+.indLinkTwo span,
+.indLinkThree span,
+.indLinkFour span {
+  color: white;
+}
+.navbarLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+  z-index: 10;
+}
+.navbarButtons {
+  display: flex;
+  padding: 2vh 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+}
+.navbarButtonOne,
+.navbarButtonTwo,
+.navbarButtonTwoWhite {
+  padding: 2vh 1.5vw;
+  z-index: 10;
+  flex-shrink: 0;
+  border-radius: 30px;
+  font-size: 1vw;
+  font-weight: 600;
+  transition: all 0.12s;
+}
+.navbarButtonOne {
+  background-color: #4543d9;
+  border: 0 !important;
+  color: white;
+}
+.navbarButtonTwo {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+}
+.navbarButtonTwo:hover {
+  background-color: #4543d9;
+  border: 2px solid #4543d9;
+  color: white;
+}
+.navbarButtonTwoWhite {
+  border: 2px solid #4543d9;
+  background-color: transparent;
+  color: #4543d9;
+}
+.navbarButtonTwoWhite:hover {
+  background-color: #4543d9;
+  color: white;
+}
+
+.navbarButtonOne:hover {
+  opacity: 0.75;
+}
+.arrowOne,
+.arrowTwo,
+.arrowThree,
+.arrowFour {
+  margin-left: 0.5rem;
+  transition: all 0.3s;
+}
+.indLinkOne:hover > .arrowOne,
+.indLinkTwo:hover > .arrowTwo,
+.indLinkThree:hover > .arrowThree,
+.indLinkFour:hover > .arrowFour {
+  transform: rotate(180deg);
+}
+.indLinkOne span:hover,
+.indLinkTwo span:hover,
+.indLinkThree span:hover,
+.indLinkFour span:hover {
+  color: #7172da !important;
+}
+.navbarLogo {
+  padding: 2vh 0;
+}
+.megaMenuOpened {
+  display: flex;
+  margin-top: -1vh;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  animation: entry 0.3s ease-in forwards;
+  z-index: 10;
+}
+@keyframes entry {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: flex;
+    opacity: 1;
+  }
+}
+@keyframes exit {
+  from {
+    display: flex;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.megaMenuClosed {
+  display: flex;
+  margin-top: -1vh;
+  justify-content: center;
+  align-items: center;
+  animation: exit 0.3s ease-in forwards;
+  display: none;
+}
+.megaMenuContainer {
+  background-color: white;
+  max-width: 80vw;
+  font-family: "Roobert", sans-serif;
+  transition: 0.3s linear;
+  border-radius: 20px;
+  z-index: 10;
+
+  top: 100%;
+  position: absolute;
+}
+.firstContainer {
+  display: grid;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  align-content: center;
+  width: "70%";
+  z-index: 10;
+  justify-items: center;
+  border-radius: 20px;
+}
+.firstContainer .firstColumn {
+  flex: 1;
+  display: flex;
+  padding: 4vh 2vw;
+  z-index: 10;
+  border-radius: 20px;
+  color: black;
+  gap: 2.5%;
+  background-color: #eeeeee;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.firstColumn .firstColumnCardContent {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  z-index: 10;
+}
+.firstColumn .firstColumnCardColored,
+.firstColumn .secondColumnCard,
+.firstColumn .thirdColumnCard {
+  display: flex;
+  border-radius: 12px;
+  flex-direction: column;
+  transition: all 0.3s;
+  padding: 2vh 2vw;
+  gap: 2vh;
+  width: 95%;
+  justify-content: space-between;
+}
+.firstColumn .firstColumnCardContent .buttonContainer {
+  background-color: transparent;
+  border: 0 !important;
+  align-items: center;
+  display: flex;
+  width: 150%;
+  gap: 2vh;
+}
+.buttonContainer p {
+  font-weight: 600;
+  color: black;
+}
+.firstColumnCardColored .firstColumnCardContent .buttonContainer p {
+  color: white;
+}
+.firstColumn .secondColumnCard,
+.firstColumn .thirdColumnCard {
+  background-color: white;
+  height: 30%;
+  color: black;
+}
+.firstColumnCardColored:hover > .firstColumnCardContent b {
+  color: #4543d9;
+}
+.firstColumnCardColored:hover > .firstColumnCardContent .buttonContainer p {
+  color: #4543d9;
+}
+.secondColumnCard:hover > .firstColumnCardContent .buttonContainer {
+  color: #4543d9;
+  scale: 1.05;
+}
+.thirdColumnCard:hover > .firstColumnCardContent .buttonContainer {
+  color: #4543d9;
+  scale: 1.05;
+}
+.firstColumn .firstColumnCardColored {
+  background-color: black;
+  color: white;
+  gap: 4vh;
+  height: 100%;
+}
+.secondColumn {
+  display: flex;
+  border-radius: 20px;
+  padding: 2vh 1vw;
+  color: black;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  gap: 5%;
+}
+.secondColumn .purpleCardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5%;
+  width: 100%;
+  height: 70%;
+  justify-items: center;
+}
+.purpleCard {
+  width: 100%;
+  background-color: #7172da;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1vh 1vw;
+  position: relative;
+}
+.purpleCard .purpleCardContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-between;
+}
+.purpleCard .purpleCardContent b {
+  margin-bottom: 1vh;
+}
+.secondColumn .lastCard {
+  width: 100%;
+  height: 30%;
+  border-radius: 20px;
+  background-color: black;
+  margin-bottom: 2vh;
+}
+.lastCard:hover > .lastCardContent b {
+  color: #4543d9;
+}
+.lastCard:hover > button {
+  color: #4543d9;
+}
+.purpleCardImage,
+.purpleCardImageOne,
+.purpleCardImageTwo,
+.purpleCardImageThree,
+.purpleCardImageFour,
+.purpleCardImageFive,
+.purpleCardImageSix {
+  width: 35%;
+  height: 70%;
+  object-fit: cover;
+  z-index: 1;
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  transition: all 0.3s ease-in;
+}
+
+.purpleCardImageOne:hover,
+.purpleCardImageTwo:hover,
+.purpleCardImageThree:hover,
+.purpleCardImageFour:hover,
+.purpleCardImageFive:hover,
+.purpleCardImageSix:hover {
+  right: 2%;
+}
+.purpleCard .horizontalStrip {
+  width: 75%;
+  position: absolute;
+  transform: rotate(145deg);
+  bottom: -40%;
+  right: -30%;
+  height: 75%;
+  z-index: 2;
+  background-color: rgba(221, 251, 255, 0.4);
+}
+.purpleCard .verticalStrip {
+  width: 75%;
+  position: absolute;
+  transform: rotate(195deg);
+  top: -10%;
+  right: -50%;
+  z-index: 0;
+  height: 150%;
+  background-color: rgba(221, 251, 255, 0.4);
+}
+/* .purpleCard:hover ~ .purpleCard img {
+  right: 2%;
+} */
+
+.secondColumn .lastCard {
+  padding: 2vh 2vw;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.lastCard .lastCardContent {
+  width: 50%;
+  color: white;
+}
+.lastCard button {
+  width: 20%;
+  background-color: transparent;
+  border: 0 !important;
+  color: white;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 5;
+  justify-content: center;
+  text-align: start;
+}
+.lastCard .rightArrowLastCard {
+  width: 30px;
+  transform: rotate(270deg);
+  height: 30px;
+}
+.secondContainer {
+  padding: 2vh 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.secondContainer .columnOne,
+.secondContainer .columnTwo,
+.secondContainer .columnThree {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  max-width: 90%;
+}
+.secondContainer .columnHeader {
+  font-weight: 600;
+  font-size: 1.1vw;
+  color: grey;
+}
+.secondContainer b {
+  font-weight: 700;
+  font-size: 1.2vw;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.secondContainer b:hover {
+  color: #4543d9;
+}
+.thirdContainer {
+  padding: 4vh 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.thirdContainer .columnOne,
+.thirdContainer .columnTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  max-width: 90%;
+}
+
+.thirdContainer .columnOne b,
+.thirdContainer .columnTwo b {
+  cursor: pointer;
+}
+.thirdContainer .columnOne b:hover,
+.thirdContainer .columnTwo b:hover {
+  color: #4543d9;
+  scale: 1.05;
+}
+.thirdContainer .imageContainer {
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2vh 2vw;
+}
+.thirdContainer .imageContainer h1 {
+  color: white;
+  margin: 0 !important;
+}
+.thirdContainer .imageContainer button {
+  background-color: #4543d9;
+  color: white;
+  padding: 1.5vh 1vw;
+  border-radius: 20px;
+  width: 50%;
+  border: 0 !important;
+}
+.thirdContainer .imageContainer button:hover {
+  opacity: 0.75;
+}
+.fourthContainer {
+  padding: 4vh 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.fourthContainerfirstColumn,
+.fourthContainersecondColumn,
+.fourthContainerthirdColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  padding: 2vh 2vw;
+  max-width: 90%;
+}
+
+.fourthContainerfirstColumn span,
+.fourthContainersecondColumn span,
+.fourthContainerthirdColumn span {
+  font-weight: 600;
+  font-size: 1.1vw;
+  color: grey;
+}
+.fourthContainerfirstColumn b,
+.fourthContainersecondColumn b,
+.fourthContainerthirdColumn b {
+  font-weight: 700;
+  font-size: 1.2vw;
+  color: black;
+  cursor: pointer;
+}
+.fourthContainerfirstColumn b:hover,
+.fourthContainersecondColumn b:hover,
+.fourthContainerthirdColumn b:hover {
+  scale: 1.05;
+  color: #4543d9;
+}
+.articlesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.article {
+  display: flex;
+  max-width: 90%;
+  max-height: 20vh;
+  border-radius: 20px;
+  background-color: black;
+}
+.article:hover > .articleContent b {
+  color: #7172da;
+  scale: 1.05;
+}
+.article:hover > .articleContent button {
+  color: #7172da;
+  scale: 1.05;
+}
+.article:hover > .articleContent button p {
+  color: #7172da;
+  scale: 1.05;
+}
+.article img {
+  border-radius: 20px;
+  width: 30%;
+  height: 100%;
+}
+.articleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  padding: 2vh 2vw;
+  max-width: 90%;
+}
+.articleContent b {
+  color: white;
+}
+.articleContent button {
+  background-color: transparent;
+  border: 0 !important;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.articlesContainer button img {
+  width: 30px;
+  height: 30px;
+  transform: rotate(270deg);
+}
+.articleContent button p {
+  color: white;
+}
+.threeLines {
+  display: none;
+}
+
+@media only screen and (max-width: 980px) {
+  .navbarLinks {
+    display: none;
+  }
+  .threeLines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    margin: 0 2vw;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+  }
+  .navbarButtonOne {
+    font-size: 18px;
+  }
+  .navbarButtonTwo,
+  .navbarButtonTwoWhite {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navbarButtonOne {
+    font-size: 14px;
+  }
+  .navbarLogo {
+    width: 30px;
+    height: 30px;
+  }
+}

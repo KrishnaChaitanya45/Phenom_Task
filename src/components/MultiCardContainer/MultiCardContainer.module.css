@@ -1,0 +1,44 @@
+.mainContainer {
+  padding: 10vh 10vw;
+  background-color: white;
+  font-family: "Roobert", sans-serif;
+}
+.mainHeading {
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: #000;
+  font-family: "Roobert", sans-serif;
+  margin: 0;
+}
+.cardContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10vh;
+}
+.mainCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+  width: 70%;
+}
+.card {
+  width: 50%;
+  min-width: 22.5vw;
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+  padding: 1vh 1vw;
+}
+.card span {
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+.card p {
+  font-size: 1.15vw;
+  font-weight: 400;
+  text-align: start;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+}

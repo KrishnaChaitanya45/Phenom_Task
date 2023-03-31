@@ -1,0 +1,74 @@
+.mainContainer {
+  background-color: black;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roobert", sans-serif;
+}
+.headingContainer p {
+  font-size: 1.1vw;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 2vh;
+  width: 70%;
+}
+.logo {
+  width: 8vw;
+  height: 3.5vw;
+  margin-right: 5vw;
+}
+.gridContainer {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  gap: 3vw;
+  color: white;
+}
+.gridItem b {
+  font-size: 1.1vw;
+  color: white;
+  font-weight: 700;
+}
+.gridItem p {
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  margin: 2vh 0;
+  cursor: pointer;
+}
+.gridItem p:hover {
+  color: #4543d9;
+}
+.lastSection {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.lastSectionLeft {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.lastSectionLeft button {
+  border: 0 !important;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1vw;
+}
+.lastSectionLeft button:hover {
+  color: #4543d9;
+}
+.SocialLogo {
+  background-color: #4543d9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

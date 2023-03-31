@@ -1,0 +1,104 @@
+.mainContainer {
+  background-color: black;
+  padding: 10vh 10vw;
+  font-family: "Roobert", sans-serif;
+}
+.mainHeading {
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+.navbarButtonOne {
+  padding: 2vh 1.5vw;
+  z-index: 10;
+  margin-top: 5vh;
+  flex-shrink: 0;
+  border-radius: 30px;
+  font-size: 1vw;
+  font-weight: 600;
+  transition: all 0.12s;
+}
+.navbarButtonOne {
+  background-color: #4543d9;
+  border: 0 !important;
+  color: white;
+}
+.navbarButtonOne:hover {
+  opacity: 0.75;
+}
+.cardsContainer {
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+}
+.upperParentContainer,
+.lowerParentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5vw;
+  height: 100vh;
+  align-items: center;
+}
+.firstUpperChildContainer,
+.firstLowerChildContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+}
+.secondUpperChildContainer,
+.secondLowerChildContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+}
+.firstUpperChildCardText h1 {
+  font-size: 1.6vw;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 2vh;
+}
+.firstUpperChildCardText span {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 2vh;
+}
+.firstUpperChildCardText p {
+  font-size: 1vw;
+  margin-top: 2vh;
+  font-weight: 400;
+  color: #fff;
+}
+
+.firstUpperChildCardText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+}
+.firstUpperChildCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.firstUpperChildCard {
+  height: 70%;
+  min-width: 22.5vw;
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+}
