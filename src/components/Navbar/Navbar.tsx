@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 const Navbar = () => {
   let theEnd: number = 0;
@@ -235,6 +236,10 @@ const Navbar = () => {
                   ? styles.navbarButtonTwoWhite
                   : styles.navbarButtonTwo
               }
+              onClick={() => {
+                signOut();
+                window.location.href = "/";
+              }}
             >
               Log Out
             </button>
