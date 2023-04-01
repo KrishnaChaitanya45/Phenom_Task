@@ -34,7 +34,7 @@ const Home = () => {
       <Quote />
       <AccordianAndGraph questions={homeData?.thirdSection.questions} />
       <MultiCardContainer />
-      <Resources article={homeData?.fifthSection} />
+      <Resources />
       <CarousalContainer />
       <PhenomInAction />
       <Footer />
