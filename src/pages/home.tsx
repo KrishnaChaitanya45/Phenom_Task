@@ -13,6 +13,7 @@ import React, { useEffect } from "react";
 import type { Metadata } from "next";
 import { RootState, useAppSelector } from "@/redux/store";
 import Aos from "aos";
+import Head from "next/head";
 import "aos/dist/aos.css";
 export const metadata: Metadata = {
   title: "Recruiters | Phenom People",
@@ -30,34 +31,39 @@ const Home = () => {
   })[0];
   console.log(homeData);
   return (
-    <div style={{ background: "black", width: "100%", overflowX: "hidden" }}>
-      <Banner />
-      <Navbar />
-      <Hero
-        title={homeData?.hero.title}
-        subtitle={homeData?.hero.subtitle}
-        dropdown="recruiters"
-      />
-      <div data-aos="fade-up" data-aos-duration="5000">
-        <Quote />
+    <>
+      <Head>
+        <title>Phenom</title>
+      </Head>
+      <div style={{ background: "black", width: "100%", overflowX: "hidden" }}>
+        <Banner />
+        <Navbar />
+        <Hero
+          title={homeData?.hero.title}
+          subtitle={homeData?.hero.subtitle}
+          dropdown="recruiters"
+        />
+        <div data-aos="fade-up" data-aos-duration="5000">
+          <Quote />
+        </div>
+        <div data-aos="fade-down-right" data-aos-duration="5000">
+          <AccordianAndGraph questions={homeData?.thirdSection.questions} />
+        </div>
+        <div data-aos="fade-down-left" data-aos-duration="5000">
+          <MultiCardContainer />
+        </div>
+        <div data-aos="fade-down" data-aos-duration="5000">
+          <Resources />
+        </div>
+        <div data-aos="fade" data-aos-duration="5000">
+          <CarousalContainer />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="5000">
+          <PhenomInAction />
+        </div>
+        <Footer />
       </div>
-      <div data-aos="fade-down-right" data-aos-duration="5000">
-        <AccordianAndGraph questions={homeData?.thirdSection.questions} />
-      </div>
-      <div data-aos="fade-down-left" data-aos-duration="5000">
-        <MultiCardContainer />
-      </div>
-      <div data-aos="fade-down" data-aos-duration="5000">
-        <Resources />
-      </div>
-      <div data-aos="fade" data-aos-duration="5000">
-        <CarousalContainer />
-      </div>
-      <div data-aos="fade-up" data-aos-duration="5000">
-        <PhenomInAction />
-      </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

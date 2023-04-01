@@ -13,6 +13,7 @@ interface article {
 }
 export interface DataState {
   id: string;
+  pageTitle: string;
   hero: {
     title: string;
     subtitle: string;
@@ -31,6 +32,7 @@ export interface DataState {
 const initialState: DataState[] = [
   {
     id: "home",
+    pageTitle: "Recruiters",
     hero: {
       title: "Phenom for Recruiters",
       subtitle:
@@ -97,6 +99,7 @@ const initialState: DataState[] = [
   },
   {
     id: "talent_marketers",
+    pageTitle: "Talent Marketers",
     hero: {
       title: "Phenom for Talent Marketers",
       subtitle: "Win the hearts and minds of candidates — with relevance.",
@@ -170,6 +173,7 @@ const initialState: DataState[] = [
   },
   {
     id: "hiring_managers",
+    pageTitle: "Hiring Managers",
     hero: {
       title: "Phenom for Hiring Marketers",
       subtitle: "Build high performance teams that scale — with insights.",
@@ -248,6 +252,7 @@ const initialState: DataState[] = [
   },
   {
     id: "talent_acquisition",
+    pageTitle: "Talent Acquisition",
     hero: {
       title: `Phenom for
 
@@ -334,6 +339,7 @@ Leaders`,
   },
   {
     id: "talent_management",
+    pageTitle: "Talent Management",
     hero: {
       title: `Phenom for 
 

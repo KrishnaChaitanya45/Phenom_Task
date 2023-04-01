@@ -15,6 +15,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { RootState, useAppSelector } from "@/redux/store";
 import { useRouter } from "next/router";
+import Head from "next/head";
 export const metadata: Metadata = {
   title: "Recruiters | Phenom People",
 };
@@ -48,39 +49,44 @@ const DynamicPage = () => {
     });
   });
   return (
-    <div style={{ background: "black", width: "100%", overflowX: "hidden" }}>
-      <Banner />
-      <Navbar />
-      <Hero
-        title={homeData?.hero.title}
-        subtitle={homeData?.hero.subtitle}
-        dropdown={homeData?.id}
-        image={homeData?.hero.image}
-      />
-      <div data-aos="fade-up" data-aos-duration="5000">
-        <Quote quote={homeData?.quote} />
-      </div>
-      <div data-aos="fade-down" data-aos-duration="5000">
-        <AccordianAndGraph
-          title={homeData?.thirdSection.title}
-          questions={homeData?.thirdSection.questions}
-          image={homeData?.thirdSection.image}
+    <>
+      <Head>
+        <title>{homeData?.pageTitle}</title>
+      </Head>
+      <div style={{ background: "black", width: "100%", overflowX: "hidden" }}>
+        <Banner />
+        <Navbar />
+        <Hero
+          title={homeData?.hero.title}
+          subtitle={homeData?.hero.subtitle}
+          dropdown={homeData?.id}
+          image={homeData?.hero.image}
         />
+        <div data-aos="fade-up" data-aos-duration="5000">
+          <Quote quote={homeData?.quote} />
+        </div>
+        <div data-aos="fade-down" data-aos-duration="5000">
+          <AccordianAndGraph
+            title={homeData?.thirdSection.title}
+            questions={homeData?.thirdSection.questions}
+            image={homeData?.thirdSection.image}
+          />
+        </div>
+        <div data-aos="fade-up-right" data-aos-duration="5000">
+          <MultiCardContainer />
+        </div>
+        <div data-aos="fade-down-right" data-aos-duration="5000">
+          <Resources article={homeData?.fifthSection} />
+        </div>
+        <div data-aos="fade-down-left" data-aos-duration="5000">
+          <CarousalContainer />
+        </div>
+        <div data-aos="fade-up-left" data-aos-duration="5000">
+          <PhenomInAction />
+        </div>
+        <Footer />
       </div>
-      <div data-aos="fade-up-right" data-aos-duration="5000">
-        <MultiCardContainer />
-      </div>
-      <div data-aos="fade-down-right" data-aos-duration="5000">
-        <Resources article={homeData?.fifthSection} />
-      </div>
-      <div data-aos="fade-down-left" data-aos-duration="5000">
-        <CarousalContainer />
-      </div>
-      <div data-aos="fade-up-left" data-aos-duration="5000">
-        <PhenomInAction />
-      </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
