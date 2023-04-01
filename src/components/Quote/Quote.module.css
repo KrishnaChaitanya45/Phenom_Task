@@ -23,11 +23,11 @@
 }
 @media screen and (max-width: 480px) {
   .mainContainer {
-    height: 50vh;
+    height: 70vh;
   }
   .mainContainer h1 {
     font-size: 32px;
     width: 100%;
-    margin-top: 15vh;
+    margin-top: 20vh;
   }
 }

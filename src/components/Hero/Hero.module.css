@@ -214,6 +214,10 @@
     width: 70%;
     text-align: start;
   }
+  .navbarButtonOne {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
   .hiddenDropDown {
     width: 100%;
   }
