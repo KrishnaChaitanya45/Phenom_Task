@@ -1,38 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Code Documentation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### hero.tsx
+ 
+ This file contains the recruiters page, it imports several components from the @/components directory. 
+ The statement `use client` above the main code implies that this component serves as the client-side and enables the utilization of React hooks..
+ 
+ The `components` used in this project implies each and every section of a single page, the `components` inlcudes:
+ 
+ `Banner`  - This component is used to display the banner image and some text, which describes about an event to be conducted
+ 
+ `AccordianAndGraph`  - This component displays an accordion-style list of questions and answers, with a graph on the side.
+ 
+ `CarousalContainer`  - This component contains the recruiters data with images in the form of a carousal
+ 
+ `Footer`  - A component that displays the footer of the page, which contains links used to navigate through the page and information about the page
+ 
+ `Hero`   - A component that displays the main hero section of a page which contains a buttton, some text and an image of an Employer
+ 
+ `MultiCardContainer` - A component which displays the grid of cards, there cards represents different projects of the company
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ `Navbar`  - A component which displays the navigation bar at the top of the page, this navbar contains the mega menu which contains different links and data which are used to navigate through the page. The Navbar changes its background color to white when we scroll the page, and by scrolling down the page, Nav bar gets disappeared, and again by scrolling up the page, Navbar gets visible. The Navbar sticks to the top of the page.
+ 
+ `PhenomInAction` - This component is used to display a button which is used to connect with the company by booking a demo.
+ 
+  `Quote` - This component is used to display the quotes which implies different roles in the company.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+  `Resources` - This component is used to display the blogs of the company based on the recruiter
+  
+  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
