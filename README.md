@@ -2,7 +2,7 @@
 
 ## Code Documentation
 
-### hero.tsx
+### home.tsx
  
  This file contains the recruiters page, it imports several components from the @/components directory. 
  The statement `use client` above the main code implies that this component serves as the client-side and enables the utilization of React hooks..
@@ -13,7 +13,7 @@
  
  `AccordianAndGraph`  - This component displays an accordion-style list of questions and answers, with a graph on the side.
  
- `CarousalContainer`  - This component contains the recruiters data with images in the form of a carousal
+ `CarouseusalContainer`  - This component contains the recruiters data with images in the form of a carousal
  
  `Footer`  - A component that displays the footer of the page, which contains links used to navigate through the page and information about the page
  
@@ -30,5 +30,22 @@
   `Resources` - This component is used to display the blogs of the company based on the recruiter
   
   
+## [id].tsx
 
+This file is used to display the page for the individual recruiter. This page uses the same compoents which are used in the home.tsx file.
+
+- Each and every component recieves props based on the pathname
+- The data for all the pages are stored in a central store using the redux toolkit for the state management.
+- The data for each and every page is fetched from the central store using the `useSelector` hook.
+- There is a single reducer named `data` which stores the whole data for all the pages as its intial state
+
+
+## Authentication
+
+The Authentication is implemented using the `Next Auth`, by using the google OAuth provider which comes by default in the Next Auth librabry
+The `session` is used to store the login information. 
+
+## Dashboard
+
+The Dashboard section contains two graphs, Bar Graph and Doughnut Graph. These Graphs are implemented using the `chart.js` library. The data used for the graphs are stored in the `Data.tsx`, for now iam using the dummy data and the graphs can be customized by editing this `Data.tsx file`.
 
