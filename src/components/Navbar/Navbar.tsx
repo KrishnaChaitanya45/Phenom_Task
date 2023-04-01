@@ -4,9 +4,22 @@ import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 const Navbar = () => {
+  const [expanded, setExpanded] = useState<string | false>(false);
+
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
   let theEnd: number = 0;
   const [scrollDown, setScrollDown] = useState<boolean>(false);
+  const [miniMenu, setIsMiniMenu] = useState<boolean>(false);
   const scrollHandler = () => {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > theEnd) {
@@ -243,7 +256,10 @@ const Navbar = () => {
             >
               Log Out
             </button>
-            <div className={styles.threeLines}>
+            <div
+              className={styles.threeLines}
+              onClick={() => setIsMiniMenu(!miniMenu)}
+            >
               <div
                 className={styles.line}
                 style={
@@ -269,6 +285,393 @@ const Navbar = () => {
                 }
               ></div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className={styles.megaMenuSmallDevices}
+        style={miniMenu ? { display: "flex" } : { display: "none" }}
+      >
+        <div className={styles.megaMenuSmallDevicesHeader}>
+          <img
+            src="/asessts/Phenom_Logo_Black.png"
+            alt="logo"
+            width={50}
+            height={50}
+            className={styles.megaMenuMiniLogo}
+          />
+          <img
+            src="/asessts/cross.svg"
+            alt="cross"
+            className={styles.crossIcon}
+            onClick={() => setIsMiniMenu(!miniMenu)}
+          />
+        </div>
+        <div className={styles.megaMenuSmallDevicesLinks}>
+          <div>
+            <Accordion
+              expanded={expanded === `panel${"1"}}`}
+              onChange={handleChange(`panel${"1"}}`)}
+              className={styles.accordion}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+                className={styles.accordionDetailsContainer}
+              >
+                <Typography
+                  sx={{ flexShrink: 0 }}
+                  className={styles.accordionTitle}
+                >
+                  Platform
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className={styles.firstContainer}>
+                  <div className={styles.firstColumn}>
+                    <div className={styles.firstColumnCardColored}>
+                      <div className={styles.firstColumnCardContent}>
+                        <b>Intelligent Talent Experience</b>
+                        <p>
+                          The AI-powered platform to hire, retain, and develop
+                          talent faster.
+                        </p>
+                        <button className={styles.buttonContainer}>
+                          <p>Platform Overview</p>
+                          <Image
+                            src="/asessts/right-arrow.svg"
+                            alt="arrow"
+                            width={20}
+                            height={20}
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <div className={styles.secondColumnCard}>
+                      <div className={styles.firstColumnCardContent}>
+                        <p>
+                          Get a comprehensive overview of the products that
+                          support each talent experience
+                        </p>
+                        <button className={styles.buttonContainer}>
+                          <p>All Phenom Products</p>
+                          <Image
+                            src="/asessts/right-arrow.svg"
+                            alt="arrow"
+                            width={20}
+                            height={20}
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <div className={styles.thirdColumnCard}>
+                      <div className={styles.firstColumnCardContent}>
+                        <p>
+                          Shrink the time between "hello" to hire from days to
+                          minutes
+                        </p>
+                        <button className={styles.buttonContainer}>
+                          <p>High-Volume Hiring</p>
+                          <Image
+                            src="/asessts/right-arrow.svg"
+                            alt="arrow"
+                            width={20}
+                            height={20}
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.secondColumn}>
+                    <div className={styles.purpleCardGrid}>
+                      <div className={styles.purpleCard}>
+                        <div className={styles.purpleCardContent}>
+                          <p>Best-fit candidates find and choose you faster.</p>
+                          <b>Candidate Experience</b>
+                          <Image
+                            src="/asessts/first_card.png"
+                            alt="firstCard"
+                            width={100}
+                            height={100}
+                            className={styles.purpleCardImageOne}
+                          />
+                          <div className={styles.horizontalStrip}></div>
+                          <div className={styles.verticalStrip}></div>
+                        </div>
+                      </div>
+                      <div className={styles.purpleCard}>
+                        <div className={styles.purpleCardContent}>
+                          <p>
+                            Employees develop their skills & evolve their
+                            careers.
+                          </p>
+                          <b>Employee Experience</b>
+                          <Image
+                            src="/asessts/megamenu/second_card.png"
+                            alt="firstCard"
+                            width={100}
+                            height={100}
+                            className={styles.purpleCardImageTwo}
+                          />
+                          <div className={styles.horizontalStrip}></div>
+                          <div className={styles.verticalStrip}></div>
+                        </div>
+                      </div>
+                      <div className={styles.purpleCard}>
+                        <div className={styles.purpleCardContent}>
+                          <p>Recruiters become wildly productive.</p>
+                          <b>Recruiter Experience</b>
+                        </div>
+                        <Image
+                          src="/asessts/megamenu/third_card.png"
+                          alt="firstCard"
+                          width={100}
+                          height={100}
+                          className={styles.purpleCardImageThree}
+                        />
+                        <div className={styles.horizontalStrip}></div>
+                        <div className={styles.verticalStrip}></div>
+                      </div>
+                      <div className={styles.purpleCard}>
+                        <div className={styles.purpleCardContent}>
+                          <p>Managers build stronger-performing teams.</p>
+                          <b>Manager Experience</b>
+                          <Image
+                            src="/asessts/megamenu/four_card.png"
+                            alt="firstCard"
+                            width={100}
+                            height={100}
+                            className={styles.purpleCardImageFour}
+                          />
+                        </div>
+                        <div className={styles.horizontalStrip}></div>
+                        <div className={styles.verticalStrip}></div>
+                      </div>
+                      <div className={styles.purpleCard}>
+                        <div className={styles.purpleCardContent}>
+                          <p>
+                            HR aligns employee development goals with company
+                            goals.
+                          </p>
+                          <b>Candidate Experience</b>
+                          <Image
+                            src="/asessts/megamenu/fifth_card.png"
+                            alt="firstCard"
+                            width={100}
+                            height={100}
+                            className={styles.purpleCardImageFive}
+                          />
+                          <div className={styles.horizontalStrip}></div>
+                          <div className={styles.verticalStrip}></div>
+                        </div>
+                      </div>
+                      <div className={styles.purpleCard}>
+                        <div className={styles.purpleCardContent}>
+                          <p>Connect Phenom to your existing HR tech stack.</p>
+                          <b>HRIS Experience</b>
+                          <Image
+                            src="/asessts/megamenu/last_card.png"
+                            alt="firstCard"
+                            width={100}
+                            height={100}
+                            className={styles.purpleCardImageSix}
+                          />
+                        </div>
+                        <div className={styles.horizontalStrip}></div>
+                        <div className={styles.verticalStrip}></div>
+                      </div>
+                    </div>
+                    <div className={styles.lastCard}>
+                      <div className={styles.lastCardContent}>
+                        <b>Phenom AI</b>
+                        <p>
+                          Explore how intelligent data and machine learning
+                          bring personalization and automation to all.
+                        </p>
+                      </div>
+                      <button>
+                        <p>Phenom AI</p>
+                        <Image
+                          src="/asessts/arrow_white.svg"
+                          alt="arrow"
+                          width={10}
+                          height={10}
+                          className={styles.rightArrowLastCard}
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === `panel${"2"}}`}
+              onChange={handleChange(`panel${"2"}}`)}
+              className={styles.accordion}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+                className={styles.accordionDetailsContainer}
+              >
+                <Typography
+                  sx={{ flexShrink: 0 }}
+                  className={styles.accordionTitle}
+                >
+                  Solutions
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className={styles.secondContainer}>
+                  <div className={styles.columnOne}>
+                    <span className={styles.columnHeader}> Role </span>
+                    <b>Recruiters</b>
+                    <b>Talent Marketers</b>
+                    <b>Hiring Marketers</b>
+                    <b>Talent Acquisition</b>
+                    <b>HRIS</b>
+                    <b>CHRO</b>
+                  </div>
+                  <div className={styles.columnTwo}>
+                    <span className={styles.columnHeader}> Industry </span>
+                    <b>Healthcare</b>
+                    <b>Technology & IT</b>
+                    <b>Transportation & Logistics</b>
+                    <b>Retail & Hospitality</b>
+                    <b>Manufacturing</b>
+                    <b>Financial Services</b>
+                    <b>Energy & Utilities</b>
+                  </div>
+                  <div className={styles.columnThree}>
+                    <span className={styles.columnHeader}> Partnership </span>
+                    <b>Workday</b>
+                    <b>SAP Success Factors</b>
+                    <b>Cornerstone OnDemand</b>
+                    <b>ADP</b>
+                    <b>Sell All Partners</b>
+                  </div>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === `panel${"3"}}`}
+              onChange={handleChange(`panel${"3"}}`)}
+              className={styles.accordion}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+                className={styles.accordionDetailsContainer}
+              >
+                <Typography
+                  sx={{ flexShrink: 0 }}
+                  className={styles.accordionTitle}
+                >
+                  Company
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className={styles.thirdContainer}>
+                  <div className={styles.columnOne}>
+                    <b>Customers</b>
+                    <b>About</b>
+                    <b>Newsroom</b>
+                    <b>Careers</b>
+                    <b>Security & Compliance</b>
+                    <b>Contact Us</b>
+                  </div>
+                  <div className={styles.columnTwo}>
+                    <b>Customer Hub</b>
+                    <b>Customer Success</b>
+                    <b>Training & Certification</b>
+                    <b>Global Customer Care</b>
+                    <b>Partners</b>
+                  </div>
+                  <div className={styles.imageContainer}>
+                    <div>
+                      <h1>We're Growing Fast !</h1>
+                      <h1>Check Our Our</h1>
+                      <h1>Open Jobs.</h1>
+                    </div>
+                    <button>Phenom Careers</button>
+                  </div>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === `panel${"4"}}`}
+              onChange={handleChange(`panel${"4"}}`)}
+              className={styles.accordion}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+                className={styles.accordionDetailsContainer}
+              >
+                <Typography
+                  sx={{ flexShrink: 0 }}
+                  className={styles.accordionTitle}
+                >
+                  Resources
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className={styles.fourthContainer}>
+                  <div className={styles.fourthContainerfirstColumn}>
+                    <span className={styles.columnHeader}>Resources</span>
+                    <b>All Resources</b>
+                    <b>Phenom Blog</b>
+                    <b>Webinars & Product Tours</b>
+                    <b>Talent Experience Live</b>
+                    <b>eBooks & Reports</b>
+                    <b>Community</b>
+                  </div>
+                  <div className={styles.fourthContainersecondColumn}>
+                    <span className={styles.columnHeader}>Case Studies</span>
+                    <b>All Case Studies</b>
+                    <b>Lumen</b>
+                    <b>Sweetwater</b>
+                    <b>LLS</b>
+                    <b>Land O'Lakes</b>
+                    <b>SASR Workforce Solutions</b>
+                  </div>
+                  <div className={styles.fourthContainerthirdColumn}>
+                    <span className={styles.columnHeader}>Featured Reads</span>
+                    <div className={styles.articlesContainer}>
+                      {articlesData &&
+                        articlesData.map((article) => (
+                          <div className={styles.article} key={article.id}>
+                            <Image
+                              src={article.image}
+                              alt="firstCard"
+                              width={100}
+                              height={100}
+                              className={styles.articleImage}
+                            />
+                            <div className={styles.articleContent}>
+                              <b> {article.text}</b>
+                              <button>
+                                <p>Read more</p>
+                                <Image
+                                  src="/asessts/arrow_white.svg"
+                                  width={10}
+                                  height={10}
+                                  alt="button"
+                                  className={styles.rightArrow}
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              </AccordionDetails>
+            </Accordion>
           </div>
         </div>
       </div>

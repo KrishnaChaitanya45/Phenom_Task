@@ -5,7 +5,7 @@
   font-family: "Roobert", sans-serif;
   z-index: 100;
 }
-.carousalContainer::-webkit-scrollbar {
+.carousal::-webkit-scrollbar {
   width: 0 !important;
 }
 .mainHeading {

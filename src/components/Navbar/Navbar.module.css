@@ -249,6 +249,220 @@
   gap: 4vh;
   height: 100%;
 }
+.megaMenuSmallDevices {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-family: "Roobert", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  background-color: white;
+  z-index: 10;
+}
+.megaMenuSmallDevicesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  width: 90%;
+  padding: 2vh 2vw;
+
+  border-radius: 20px 20px 0 0;
+}
+.megaMenuSmallDevicesLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+
+  width: 90%;
+  margin-top: 30px;
+  padding: 2vh 2vw;
+  border-radius: 0 0 20px 20px;
+}
+.accordion .firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+}
+.crossIcon {
+  width: 30px;
+  height: 30px;
+}
+.accordion .firstContainer .firstColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+}
+.accordion .firstContainer .firstColumn .firstColumnCardColored,
+.accordion .firstContainer .firstColumn .secondColumnCard,
+.accordion .firstContainer .firstColumn .thirdColumnCard {
+  width: 100%;
+  height: 100%;
+}
+.accordion .firstContainer .firstColumn .firstColumnCardColored b,
+.accordion .firstContainer .firstColumn .secondColumnCard p,
+.accordion .firstContainer .firstColumn .thirdColumnCard p {
+  font-size: 24px;
+}
+.accordion .firstContainer .firstColumn .firstColumnCardColored p {
+  font-size: 18px;
+}
+.accordion .firstContainer .secondColumn .purpleCardGrid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.accordion .purpleCard {
+  width: 100%;
+
+  height: 20vh;
+}
+.accordion .purpleCardContent p {
+  font-size: 20px;
+}
+.accordionTitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+
+  padding: 2vh 1vw;
+  margin: 0;
+}
+.accordion .lastCard {
+  width: 100%;
+  margin-top: 10vh;
+  height: 20vh;
+}
+.accordion .lastCard .lastCardContent {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  gap: 2vh;
+}
+.accordion .secondContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  gap: 5vh;
+  padding: 0;
+}
+.accordion .secondContainer .columnOne,
+.accordion .secondContainer .columnTwo,
+.accordion .secondContainer .columnThree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  font-family: "Roobert", sans-serif;
+  width: 100%;
+}
+.accordion .secondContainer .columnOne b,
+.accordion .secondContainer .columnTwo b,
+.accordion .secondContainer .columnThree b {
+  font-size: 18px;
+}
+.accordion .secondContainer .columnOne span,
+.accordion .secondContainer .columnTwo span,
+.accordion .secondContainer .columnThree span {
+  font-size: 24px;
+}
+.accordion .thirdContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  gap: 5vh;
+  padding: 0;
+}
+.accordion .thirdContainer .columnOne {
+  min-width: 40%;
+  max-width: 40%;
+}
+.accordion .thirdContainer .columnTwo {
+  min-width: 40%;
+  max-width: 40%;
+}
+.accordion .thirdContainer .imageContainer {
+  width: 100%;
+  height: 30vh;
+}
+.accordion .fourthContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  gap: 5vh;
+  padding: 0;
+}
+.accordion .fourthContainer .fourthContainerfirstColumn,
+.accordion .fourthContainer .fourthContainersecondColumn,
+.accordion .fourthContainer .fourthContainerthirdColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  font-family: "Roobert", sans-serif;
+  width: 100%;
+}
+.accordion .fourthContainer .fourthContainerfirstColumn b,
+.accordion .fourthContainer .fourthContainersecondColumn b,
+.accordion .fourthContainer .fourthContainerthirdColumn b {
+  font-size: 16px;
+}
+.accordion .fourthContainer .fourthContainerfirstColumn span,
+.accordion .fourthContainer .fourthContainersecondColumn span,
+.accordion .fourthContainer .fourthContainerthirdColumn span {
+  font-size: 24px;
+}
+
+.accordionDetail {
+  width: 60%;
+  overflow: scroll;
+  padding: 1vh 1vw;
+}
+.accordionButton {
+  padding: 1vh 1vw;
+  font-size: 1.1vw;
+  color: #4543d9;
+  background-color: transparent;
+  border: 0 !important;
+}
+.accordionTitle:hover {
+  color: #4543d9;
+}
+.megaMenuMiniLogo {
+  width: 150px;
+  height: 70px;
+  object-fit: contain;
+}
 .secondColumn {
   display: flex;
   border-radius: 20px;
@@ -578,5 +792,41 @@
   .navbarLogo {
     width: 30px;
     height: 30px;
+  }
+  .megaMenuSmallDevicesLinks {
+    width: 100%;
+  }
+  .accordion .firstContainer .firstColumn .firstColumnCardContent b {
+    font-size: 20px;
+  }
+  .accordion .firstContainer .firstColumn .secondColumnCard p,
+  .accordion .firstContainer .firstColumn .thirdColumnCard p {
+    font-size: 18px;
+  }
+  .accordion .firstContainer .firstColumn .buttonContainer p {
+    font-size: 18px;
+  }
+  .accordion .firstContainer .secondColumn .purpleCardGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1vh;
+  }
+  .accordion .firstContainer .purpleCard {
+    padding: 10px 20px;
+  }
+  .accordion .firstContainer .lastCard {
+    padding: 10px 20px;
+    margin-top: 2vh;
+  }
+  .accordion .firstContainer .lastCard button {
+    margin-top: 2vh;
+    width: 50%;
+  }
+  .accordion .article img {
+    display: none;
+  }
+  .accordion .articleContent {
+    max-width: 100%;
+    padding: 20px 40px;
   }
 }

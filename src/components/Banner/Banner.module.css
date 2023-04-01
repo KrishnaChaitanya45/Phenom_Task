@@ -89,6 +89,9 @@
   .buildings {
     width: 30%;
   }
+  .bannerButton {
+    display: none;
+  }
   .bannerButtonContainer {
     z-index: 10;
   }
@@ -116,6 +119,9 @@
   }
   .bannerButton p {
     font-size: 14px;
+  }
+  .bannerButton {
+    z-index: 2;
   }
   .mainContainer {
     justify-content: flex-start;
