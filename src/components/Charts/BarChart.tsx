@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { data } from "../../Data/Data";
+import styles from "../../styles/dashboard.module.css";
 import {
   Chart as ChartJS,
   LineElement,
@@ -30,16 +31,7 @@ ChartJS.register(
 );
 const BarChart = ({ chartData }: { chartData: any }) => {
   return (
-    <div
-      style={{
-        width: "50vw",
-        padding: "2rem",
-        display: "flex",
-        alignItems: "center",
-        height: "100vh",
-        flexShrink: 0,
-      }}
-    >
+    <div className={styles.barChart}>
       <Bar data={data} />
     </div>
   );

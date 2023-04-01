@@ -1,5 +1,6 @@
 import { Doughnut } from "react-chartjs-2";
 import { data1 } from "../../Data/Data";
+import styles from "../../styles/dashboard.module.css";
 import {
   Chart as ChartJS,
   LineElement,
@@ -32,16 +33,7 @@ ChartJS.register(
 );
 const DoughnutChart = () => {
   return (
-    <div
-      style={{
-        width: "40vw",
-        padding: "2rem",
-        display: "flex",
-        alignItems: "center",
-        height: "100vh",
-        flexShrink: 0,
-      }}
-    >
+    <div className={styles.doughnutChart}>
       <Doughnut data={data1} />
     </div>
   );

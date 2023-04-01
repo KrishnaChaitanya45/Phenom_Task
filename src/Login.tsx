@@ -2,7 +2,7 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useState } from "react";
-
+import styles from "./styles/dashboard.module.css";
 export default function Login() {
   const [login, setLogin] = useState<boolean>(false);
   const router = useRouter();
@@ -26,7 +26,12 @@ export default function Login() {
       }}
     >
       {login ? (
-        <button onClick={() => signIn("google")}>Sign in</button>
+        <button
+          onClick={() => signIn("google")}
+          className={styles.signInButton}
+        >
+          Sign in
+        </button>
       ) : (
         <h1>Loading...</h1>
       )}

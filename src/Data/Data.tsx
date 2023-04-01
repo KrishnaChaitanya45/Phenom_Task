@@ -18,7 +18,7 @@ export const data = {
       label: "Sales/ month",
       fill: true,
       lineTension: 0.1,
-      backgroundColor: "rgba(75,192,192,0.4)",
+      backgroundColor: "#4543d9",
       borderColor: "rgba(75,192,192,1)",
       borderCapStyle: "butt",
       borderDash: [],
