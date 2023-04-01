@@ -42,3 +42,37 @@
   line-height: 24px;
   color: rgba(0, 0, 0, 1);
 }
+
+@media screen and (max-width: 980px) {
+  .mainContainer {
+    padding: 5vh 5vw;
+  }
+  .mainHeading {
+    font-size: 32px;
+  }
+  .mainCardContainer {
+    width: 100%;
+    gap: 2vw;
+    justify-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+  .card span {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainContainer {
+    padding: 5vh 5vw;
+  }
+  .mainCardContainer {
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+    gap: 5vh;
+  }
+}

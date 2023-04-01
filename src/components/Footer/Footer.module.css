@@ -72,3 +72,48 @@
   height: 50px;
   border-radius: 50%;
 }
+
+@media screen and (max-width: 980px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5vw;
+    justify-items: center;
+  }
+  .gridItem {
+    width: 100%;
+  }
+  .gridItem h3 {
+    font-size: 24px;
+  }
+  .gridItem p {
+    font-size: 14px;
+  }
+  .logo {
+    width: 100px;
+    height: 40px;
+  }
+  .headingContainer p {
+    font-size: 26px;
+  }
+  .lastSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    justify-content: center;
+  }
+  .lastSectionLeft {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .lastSectionLeft button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .lastSectionLeft {
+    flex-wrap: wrap;
+    gap: 4vh;
+  }
+}

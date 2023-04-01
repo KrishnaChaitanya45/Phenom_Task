@@ -34,7 +34,10 @@ const CarousalContainer = () => {
     <div className={styles.mainContainer}>
       <div className={styles.headingContainer}>
         <h1 className={styles.mainHeading}>How recruiters experience Phenom</h1>
-        <div style={{ display: "flex", gap: "1vw" }}>
+        <div
+          style={{ display: "flex", gap: "1vw" }}
+          className={styles.arrowsContainer}
+        >
           <img
             src="/asessts/arrow.svg"
             alt="left arrow"

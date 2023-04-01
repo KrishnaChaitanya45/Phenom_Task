@@ -11,3 +11,23 @@
   font-family: "Roobert", sans-serif;
   width: 60%;
 }
+@media screen and (max-width: 980px) {
+  .mainContainer {
+    padding: 10vh 5vw;
+  }
+  .mainContainer h1 {
+    font-size: 62px;
+    width: 100%;
+    margin-top: 25vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainContainer {
+    height: 50vh;
+  }
+  .mainContainer h1 {
+    font-size: 32px;
+    width: 100%;
+    margin-top: 15vh;
+  }
+}

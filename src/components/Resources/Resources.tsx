@@ -59,7 +59,7 @@ const Resources = (props: Props) => {
                   src={
                     props.article
                       ? props.article[1].image
-                      : "/asessts/recruiters/article_one.webp"
+                      : "/asessts/recruiters/article_two.webp"
                   }
                   width={100}
                   height={100}
@@ -93,7 +93,7 @@ const Resources = (props: Props) => {
                   src={
                     props.article
                       ? props.article[2].image
-                      : "/asessts/man-smiling.webp"
+                      : "/asessts/recruiters/article_three.jpg"
                   }
                   width={100}
                   height={100}
@@ -125,7 +125,7 @@ const Resources = (props: Props) => {
                   src={
                     props.article
                       ? props.article[3].image
-                      : "/asessts/recruiters/article_one.webp"
+                      : "/asessts/recruiters/article_four.webp"
                   }
                   width={100}
                   height={100}

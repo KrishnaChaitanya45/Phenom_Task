@@ -5,6 +5,9 @@
   font-family: "Roobert", sans-serif;
   z-index: 100;
 }
+.carousalContainer::-webkit-scrollbar {
+  width: 0 !important;
+}
 .mainHeading {
   font-size: 3.5vw;
   font-weight: 500;
@@ -84,4 +87,43 @@
   font-weight: 600;
   color: #000;
   margin: 2vh 0;
+}
+
+@media screen and (max-width: 980px) {
+  .mainContainer {
+    padding: 10vh 5vw;
+  }
+  .mainHeading {
+    font-size: 32px;
+  }
+  .carousalContainer {
+    height: 40vh;
+  }
+  .card {
+    width: 40%;
+    height: 100%;
+  }
+  .imageContainer {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .arrowOne,
+  .arrowTwo {
+    display: none;
+  }
+  .carousalContainer {
+    height: 50vh;
+  }
+  .carousal {
+    overflow-x: auto;
+  }
+  .card {
+    width: 60vw;
+    height: 50vh;
+  }
+  .card h1 {
+    font-size: 20px;
+  }
 }

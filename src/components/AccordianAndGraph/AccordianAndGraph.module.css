@@ -61,3 +61,39 @@
 .accordionTitle:hover {
   color: #4543d9;
 }
+@media screen and (max-width: 980px) {
+  .twoDivContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+  .twoDivContainer .leftDiv {
+    width: 100%;
+    height: 50%;
+  }
+  .twoDivContainer .rightDiv {
+    width: 100%;
+    height: 50%;
+  }
+  .mainHeading {
+    font-size: 32px;
+  }
+  .accordionTitle {
+    font-size: 16px;
+  }
+  .accordionButton {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainHeading {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .accordionTitle {
+    font-size: 18px;
+  }
+  .accordionButton {
+    font-size: 14px;
+  }
+}
