@@ -37,7 +37,6 @@
   background-color: white;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../../../public//asessts/hero_section_right.webp");
 }
 .first {
   display: flex;
@@ -78,6 +77,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  width: 100%;
   margin-bottom: 5vh;
   gap: 2vw;
 }
@@ -100,17 +100,20 @@
 .hiddenDropDown {
   padding: 1vh 1vw;
   background-color: white;
+  color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: absolute;
   top: 0%;
+  right: 20%;
+
+  max-height: 50vh;
   overflow: hidden;
   transition: all 0.3s ease-in;
   z-index: 10;
 
   width: 20vw;
-  justify-content: center;
+  justify-content: space-between;
 }
 .hiddenDropDownHeader {
   display: flex;
@@ -144,5 +147,36 @@
 }
 .parentDropDownContainer {
   position: relative;
+  width: 100%;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 980px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  .secondContainer {
+    order: 1;
+    width: 100%;
+  }
+  .firstContainer {
+    order: 2;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .secondContainer {
+    transform: translateX(0);
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .first {
+    margin-left: 0;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .dropDownContainer {
+    justify-content: flex-start;
+    margin-top: 5vh;
+  }
 }

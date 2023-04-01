@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import Link from "next/link";
 const Navbar = () => {
   let theEnd: number = 0;
   const [scrollDown, setScrollDown] = useState<boolean>(false);
@@ -222,9 +223,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className={styles.navbarButtons}>
-            <button className={styles.navbarButtonOne} id="navbar-button">
-              Book Demo
-            </button>
+            <Link href="/dashboard">
+              {" "}
+              <button className={styles.navbarButtonOne} id="navbar-button">
+                Dashboard
+              </button>
+            </Link>
             <button
               className={
                 scrollDown
@@ -232,7 +236,7 @@ const Navbar = () => {
                   : styles.navbarButtonTwo
               }
             >
-              Log In
+              Log Out
             </button>
             <div className={styles.threeLines}>
               <div

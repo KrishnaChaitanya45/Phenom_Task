@@ -35,7 +35,7 @@ const CarousalContainer = () => {
       <div className={styles.headingContainer}>
         <h1 className={styles.mainHeading}>How recruiters experience Phenom</h1>
         <div style={{ display: "flex", gap: "1vw" }}>
-          <Image
+          <img
             src="/asessts/arrow.svg"
             alt="left arrow"
             width={20}
@@ -43,7 +43,7 @@ const CarousalContainer = () => {
             className={styles.arrowOne}
             onClick={() => slideRight()}
           />
-          <Image
+          <img
             src="/asessts/arrow.svg"
             alt="left arrow"
             width={20}
@@ -67,7 +67,7 @@ const CarousalContainer = () => {
             <div className={styles.cardHeading}>
               <div className={styles.imageContainer}>
                 {firstCardHover ? (
-                  <Image
+                  <img
                     src="/asessts/Recruiters_front_1.png"
                     alt="Recruiters_front_1"
                     width={100}
@@ -75,7 +75,7 @@ const CarousalContainer = () => {
                     className={styles.image}
                   />
                 ) : (
-                  <Image
+                  <img
                     src="/asessts/Recruiters_side_1.png"
                     alt="Recruiters_side_1"
                     width={100}
@@ -100,7 +100,7 @@ const CarousalContainer = () => {
             <div className={styles.cardHeading}>
               <div className={styles.imageContainer}>
                 {secondCardHover ? (
-                  <Image
+                  <img
                     src="/asessts/Recruiter_front_2.png"
                     alt="Recruiters_side_1"
                     width={100}
@@ -108,7 +108,7 @@ const CarousalContainer = () => {
                     className={styles.image}
                   />
                 ) : (
-                  <Image
+                  <img
                     src="/asessts/Recruiter_side_2.png"
                     alt="Recruiters_side_1"
                     width={100}
@@ -133,7 +133,7 @@ const CarousalContainer = () => {
             <div className={styles.cardHeading}>
               <div className={styles.imageContainer}>
                 {thirdCardHover ? (
-                  <Image
+                  <img
                     src="/asessts/Carousal_3_after.png"
                     alt="Recruiters_side_1"
                     width={100}
@@ -141,7 +141,7 @@ const CarousalContainer = () => {
                     className={styles.image}
                   />
                 ) : (
-                  <Image
+                  <img
                     src="/asessts/Carosual_3_before.png"
                     alt="Recruiters_side_1"
                     width={100}
@@ -166,7 +166,7 @@ const CarousalContainer = () => {
             <div className={styles.cardHeading}>
               <div className={styles.imageContainer}>
                 {fourCardHover ? (
-                  <Image
+                  <img
                     src="/asessts/Carousal_last_before.png"
                     alt="Recruiters_side_1"
                     width={100}
@@ -174,7 +174,7 @@ const CarousalContainer = () => {
                     className={styles.image}
                   />
                 ) : (
-                  <Image
+                  <img
                     src="/asessts/Carousal_last_after.png"
                     alt="Recruiters_side_1"
                     width={100}

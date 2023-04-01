@@ -6,7 +6,18 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React from "react";
 import styles from "./AccordianAndGraph.module.css";
-const AccordianAndGraph = () => {
+import Image from "next/image";
+interface question {
+  id: number;
+  question: string;
+  answer: string;
+}
+interface Props {
+  title?: string;
+  questions?: question[];
+  image?: string;
+}
+const AccordianAndGraph = (props: Props) => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
@@ -16,40 +27,50 @@ const AccordianAndGraph = () => {
   return (
     <div className={styles.mainContainer}>
       <h1 className={styles.mainHeading}>
-        Discover eligible candidates and find the right fit for open roles.
+        {props.title
+          ? props.title
+          : " Discover eligible candidates and find the right fit for open roles."}
       </h1>
       <div className={styles.twoDivContainer}>
         <div className={styles.leftDiv}>
           <div>
-            <Accordion
-              expanded={expanded === "panel1"}
-              onChange={handleChange("panel1")}
-              className={styles.accordion}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1bh-content"
-                id="panel1bh-header"
-                className={styles.accordionDetailsContainer}
-              >
-                <Typography
-                  sx={{ flexShrink: 0 }}
-                  className={styles.accordionTitle}
+            {props.questions &&
+              props.questions.map((question) => (
+                <Accordion
+                  key={question.id}
+                  expanded={expanded === `panel${question.id}}`}
+                  onChange={handleChange(`panel${question.id}}`)}
+                  className={styles.accordion}
                 >
-                  Find the Best Fit, Faster
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography className={styles.accordionDetail}>
-                  Prioritize outreach to candidates that meet qualifications
-                  such as skills, title, experience, and location.
-                </Typography>
-                <button className={styles.accordionButton}>
-                  Learn more {">"}{" "}
-                </button>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1bh-content"
+                    id="panel1bh-header"
+                    className={styles.accordionDetailsContainer}
+                  >
+                    <Typography
+                      sx={{ flexShrink: 0 }}
+                      className={styles.accordionTitle}
+                    >
+                      {question.question
+                        ? question.question
+                        : "Find the Best Fit, Faster"}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography className={styles.accordionDetail}>
+                      {question.answer
+                        ? question.answer
+                        : `Prioritize outreach to candidates that meet qualifications
+                  such as skills, title, experience, and location.`}
+                    </Typography>
+                    <button className={styles.accordionButton}>
+                      Learn more {">"}{" "}
+                    </button>
+                  </AccordionDetails>
+                </Accordion>
+              ))}
+            {/* <Accordion
               expanded={expanded === "panel2"}
               onChange={handleChange("panel2")}
               className={styles.accordion}
@@ -106,10 +127,18 @@ const AccordianAndGraph = () => {
                   Learn more {">"}{" "}
                 </button>
               </AccordionDetails>
-            </Accordion>
+            </Accordion> */}
           </div>
         </div>
-        <div className={styles.rightDiv}></div>
+        <div className={styles.rightDiv}>
+          <Image
+            src={props.image ? props.image : "/asessts/Fit_Score.png"}
+            alt="Fit Score"
+            width={500}
+            height={500}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+        </div>
       </div>
     </div>
   );

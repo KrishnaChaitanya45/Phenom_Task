@@ -1,8 +1,19 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styles from "./Hero.module.css";
-const Hero = ({ title, subtitle }: { title: string; subtitle: string }) => {
+const Hero = ({
+  title,
+  subtitle,
+  dropdown,
+  image,
+}: {
+  title?: string;
+  subtitle?: string;
+  dropdown?: string;
+  image?: string;
+}) => {
   const [isHovered, setIsHovered] = React.useState<boolean>(false);
   const [isOpen, setIsOpen] = React.useState<boolean>(true);
 
@@ -27,15 +38,13 @@ const Hero = ({ title, subtitle }: { title: string; subtitle: string }) => {
       name: "Talent Management",
       image: "/asessts/megamenu/four_card.png",
     },
-    {
-      name: "HRIS",
-      image: "/asessts/megamenu/fifth_card.png",
-    },
-    {
-      name: "CHRO",
-      image: "/asessts/megamenu/last_card.png",
-    },
   ];
+
+  const dropdownText = roles.map((role) => {
+    if (role.name.replace(" ", "_").toLowerCase() === dropdown?.toLowerCase()) {
+      return role.name;
+    }
+  });
   return (
     <div className={styles.mainContainer}>
       <div className={styles.firstContainer}>
@@ -61,7 +70,7 @@ const Hero = ({ title, subtitle }: { title: string; subtitle: string }) => {
                   className={styles.InnerImage}
                 />
               </div>
-              <p>Recruiters</p>
+              <p>{dropdownText}</p>
               <Image
                 src="/asessts/arrow_white.svg"
                 alt="Down"
@@ -88,18 +97,27 @@ const Hero = ({ title, subtitle }: { title: string; subtitle: string }) => {
               {roles &&
                 roles.map((role) => {
                   return (
-                    <div className={styles.indDivDropDown} key={role.name}>
-                      <div className={styles.DropDownImage}>
-                        <Image
-                          src={role.image}
-                          alt="First"
-                          width={35}
-                          height={35}
-                          className={styles.InnerImageHidden}
-                        />
+                    <Link
+                      href={`/${
+                        role.name.toLowerCase() === "recruiters"
+                          ? "home"
+                          : role.name.replace(" ", "_").toLowerCase()
+                      }`}
+                    >
+                      {" "}
+                      <div className={styles.indDivDropDown} key={role.name}>
+                        <div className={styles.DropDownImage}>
+                          <Image
+                            src={role.image}
+                            alt="First"
+                            width={35}
+                            height={35}
+                            className={styles.InnerImageHidden}
+                          />
+                        </div>
+                        <p>{role.name}</p>
                       </div>
-                      <p>{role.name}</p>
-                    </div>
+                    </Link>
                   );
                 })}
               {/* <div className={styles.indDivDropDown}>
@@ -116,20 +134,32 @@ const Hero = ({ title, subtitle }: { title: string; subtitle: string }) => {
               </div> */}
             </div>
           </div>
-          <h1 className={styles.heading}>Phenom for</h1>
-          <h1 className={styles.headingColored}>Recruiters</h1>
+          <h1 className={styles.heading}>
+            {title ? title : "Phenom for Recruiters"}
+          </h1>
+          {/* <h1 className={styles.headingColored}>Recruiters</h1> */}
         </div>
         <div className={styles.second}>
           <p>
-            Discover, engage and hire phenomenal people - with speed and
-            velocity
+            {subtitle
+              ? subtitle
+              : ` Discover, engage and hire phenomenal people - with speed and
+            velocity`}
           </p>
           <button className={styles.navbarButtonOne} id="navbar-button">
             Book Demo
           </button>
         </div>
       </div>
-      <div className={styles.secondContainer}></div>
+      <div className={styles.secondContainer}>
+        <Image
+          src={image ? image : "/asessts/hero_section_right.webp"}
+          alt="First"
+          width={500}
+          height={500}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        />
+      </div>
     </div>
   );
 };
